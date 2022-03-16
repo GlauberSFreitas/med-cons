@@ -4,7 +4,8 @@ const repository = require('../repositories/patient-repository');
 
 exports.post = async (req, res, next) => {
     try {
-        await repository.create({
+        console.log(req);
+        var data = await repository.create({
             name: req.body.name,
             cpf: req.body.cpf,
             born: req.body.born,
@@ -13,9 +14,7 @@ exports.post = async (req, res, next) => {
             pressure: req.body.pressure,
             saturation: req.body.saturation
         });
-        res.status(201).send({
-            message: 'Paciente cadastrado com sucesso!'
-        });
+        res.status(201).send(data);
     } catch (e) {
         res.status(500).send({
             message: 'Falha ao processar sua requisição'

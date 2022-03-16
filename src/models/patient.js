@@ -13,7 +13,7 @@ const schema = new Schema({
         required: [true, 'cpf é um campo obrigatório'],
     },
     born: {
-        type: Date,
+        type: String,
         required: [true, 'born é um campo obrigatório'],
     },
     height: {
@@ -31,7 +31,7 @@ const schema = new Schema({
     saturation: {
         type: Number,
         required: [true, 'saturation é campo obrigatório'],
-        default: false
+        
     }
 
 });

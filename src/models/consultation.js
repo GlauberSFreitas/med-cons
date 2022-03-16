@@ -11,12 +11,12 @@ const schema = new Schema({
     },
     active: {
         type: Boolean,
-        required: [true, 'active é campo obrigatório'],
+        required: [false, 'active é campo obrigatório'],
         default: false
     },
     startAt: {
-        type: Date,
-        required: [true, 'startAt é campo obrigatório'],
+        type: String,
+        required: [false, 'startAt é campo obrigatório'],
         unique: [true, 'Não é possivel criar uma consulta neste horario']
     },
     patient: {

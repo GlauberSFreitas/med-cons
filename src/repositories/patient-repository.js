@@ -10,5 +10,5 @@ exports.get = async() => {
 
 exports.create = async(data) => {
     var patient = new Patient(data);
-    await patient.save();
+   return await patient.save();
 }
